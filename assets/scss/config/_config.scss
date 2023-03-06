@@ -1,0 +1,250 @@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@  FONTS  @@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@font-face {
+  font-family: 'body';
+  src: url(../fonts/IRANSansWeb.ttf);
+}
+
+@font-face {
+  font-family: 'title';
+  src: url(../fonts/IBMPlexSansArabic-Bold.ttf);
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@  VARIABLES  @@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+:root {
+  // --h1-font-size: 4.209rem;
+  // --h2-font-size: 3.157rem;
+  // --h3-font-size: 2.369rem;
+  // --h4-font-size: 1.777rem;
+  // --h5-font-size: 1.333rem;
+  // --body-font-size: 1rem;
+  // --small-font-size: 0.75rem;
+  // --tiny-font-size: 0.563rem;
+
+  --h1-font-size: 3.052rem;
+  --h2-font-size: 2.441rem;
+  --h3-font-size: 1.953rem;
+  --h4-font-size: 1.563rem;
+  --h5-font-size: 1.25rem;
+  --body-font-size: 1rem;
+  --small-font-size: 0.8rem;
+  --tiny-font-size: 0.64rem;
+
+  --primary-color: hsl(42, 100%, 55%);
+  --secondary-color: hsl(202, 95%, 15%);
+  --secondary-color: hsl(203, 95%, 30%);
+  --bg-dark-color: hsl(195, 14%, 11%);
+  --bg-light-color: hsl(200, 13%, 95%);
+
+  --text-color-light: hsl(200, 13%, 70%);
+  --title-color-light: hsl(200, 13%, 95%);
+  --text-color-dark: hsl(200, 13%, 95%);
+  --title-color-dark: hsl(200, 13%, 5%);
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@     BASE    @@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'body';
+}
+
+body {
+  font-size: var(--body-font-size);
+  background: var(--bg-light-color);
+  color: var(--text-color-light);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'title';
+  color: var(--title-color-light);
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+}
+
+h5 {
+  font-size: var(--h5-font-size);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: var(--normal-font-size);
+}
+
+button {
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}
+
+.button {
+  display: inline-block;
+  text-align: center;
+  color: var(--title-color-light);
+  background: var(--secondary-color);
+  padding: 0.7rem 3rem;
+  border-radius: 10rem;
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@  REUSABLE CLASSES   @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding-inline: 2rem;
+}
+
+.section {
+}
+
+.section-border {
+}
+
+.section-title {
+}
+
+.section-subtitle {
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@     SCROLL UP      @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+.scrollup {
+  position: fixed;
+  left: 2rem;
+  bottom: -30%;
+  z-index: 99;
+  opacity: 0.5;
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  i {
+    color: hsl(207, 65%, 60%);
+    font-size: 2rem;
+  }
+}
+
+.scrollup:hover {
+  opacity: 1;
+}
+
+.show-scrollup {
+  bottom: 3rem;
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@     SCROLL BAR     @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+::-webkit-scrollbar {
+  background: hsl(207, 4%, 85%);
+  width: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(207, 4%, 70%);
+  width: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(207, 4%, 60%);
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@    BREAKPOINTS     @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media (max-width: 1024px) {
+  :root {
+    // --h1-font-size: 3.052rem;
+    // --h2-font-size: 2.441rem;
+    // --h3-font-size: 1.953rem;
+    // --h4-font-size: 1.563rem;
+    // --h5-font-size: 1.25rem;
+    // --body-font-size: 1rem;
+    // --small-font-size: 0.8rem;
+    // --tiny-font-size: 0.64rem;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --h1-font-size: 2.488rem;
+    --h2-font-size: 2.074rem;
+    --h3-font-size: 1.728rem;
+    --h4-font-size: 1.44rem;
+    --h5-font-size: 1.2rem;
+    --body-font-size: 1rem;
+    --small-font-size: 0.833rem;
+    --tiny-font-size: 0.694rem;
+  }
+}
+
+@media (max-width: 575px) {
+  :root {
+    --h1-font-size: 1.802rem;
+    --h2-font-size: 1.602rem;
+    --h3-font-size: 1.424rem;
+    --h4-font-size: 1.266rem;
+    --h5-font-size: 1.125rem;
+    --body-font-size: 1rem;
+    --small-font-size: 0.889rem;
+    --tiny-font-size: 0.79rem;
+  }
+}
+
+@media (max-width: 374px) {
+}

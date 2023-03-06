@@ -1,0 +1,114 @@
+.home {
+  padding-block: 10rem;
+  background: var(--bg-dark-color);
+  position: relative;
+
+  .bg-circle {
+    position: absolute;
+    filter: blur(150px);
+    border-radius: 50%;
+  }
+
+  .bg-circle-1 {
+    background: var(--primary-color);
+    bottom: -3rem;
+    right: 10rem;
+    width: 300px;
+    height: 300px;
+  }
+
+  .bg-circle-2 {
+    background: var(--secondary-color);
+    top: 10rem;
+    left: -2rem;
+    width: 300px;
+    height: 300px;
+  }
+
+  .home__container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .home__data {
+    .home__title {
+      margin-bottom: 1rem;
+
+      .home__animation-text {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        color: hsl(42, 100%, 55%);
+        font-family: 'title';
+      }
+
+      .home__animation-text::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--bg-dark-color);
+        animation: homeAnimation 4s infinite steps(30);
+      }
+
+      @keyframes homeAnimation {
+        0% {
+          right: 0;
+        }
+
+        50% {
+          right: 110%;
+        }
+
+        100% {
+          right: 0;
+        }
+      }
+    }
+
+    .home__description {
+      margin-bottom: 3rem;
+
+      text-align: justify;
+    }
+
+    .home__stats {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      border: 1px solid hsla(200, 13%, 70%, 0.3);
+      border-radius: 0.5rem;
+      padding: 2.5rem 2rem;
+
+      .home__stats-number {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        line-height: 1;
+        color: var(--secondary-color);
+      }
+
+      .home__stats-number span:last-child {
+        font-size: 2.7rem;
+      }
+
+      .home__stats-description {
+        text-align: justify;
+      }
+    }
+  }
+
+  .home__img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@        BREAKPOINTS        @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
