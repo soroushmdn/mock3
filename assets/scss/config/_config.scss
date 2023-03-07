@@ -15,15 +15,6 @@
 // @@@@@@@@@@@@@  VARIABLES  @@@@@@@@@@@@@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 :root {
-  // --h1-font-size: 4.209rem;
-  // --h2-font-size: 3.157rem;
-  // --h3-font-size: 2.369rem;
-  // --h4-font-size: 1.777rem;
-  // --h5-font-size: 1.333rem;
-  // --body-font-size: 1rem;
-  // --small-font-size: 0.75rem;
-  // --tiny-font-size: 0.563rem;
-
   --h1-font-size: 3.052rem;
   --h2-font-size: 2.441rem;
   --h3-font-size: 1.953rem;
@@ -38,6 +29,7 @@
   --secondary-color: hsl(203, 95%, 30%);
   --bg-dark-color: hsl(195, 14%, 11%);
   --bg-light-color: hsl(200, 13%, 95%);
+  --container-color: hsl(200, 13%, 92%);
 
   --text-color-light: hsl(200, 13%, 70%);
   --title-color-light: hsl(200, 13%, 95%);
@@ -58,7 +50,7 @@
 body {
   font-size: var(--body-font-size);
   background: var(--bg-light-color);
-  color: var(--text-color-light);
+  color: var(--text-color-dark);
 }
 
 html {
@@ -76,7 +68,7 @@ h4,
 h5,
 h6 {
   font-family: 'title';
-  color: var(--title-color-light);
+  color: var(--title-color-dark);
 }
 
 h1 {
@@ -209,19 +201,6 @@ textarea {
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @media (max-width: 1024px) {
   :root {
-    // --h1-font-size: 3.052rem;
-    // --h2-font-size: 2.441rem;
-    // --h3-font-size: 1.953rem;
-    // --h4-font-size: 1.563rem;
-    // --h5-font-size: 1.25rem;
-    // --body-font-size: 1rem;
-    // --small-font-size: 0.8rem;
-    // --tiny-font-size: 0.64rem;
-  }
-}
-
-@media (max-width: 767px) {
-  :root {
     --h1-font-size: 2.488rem;
     --h2-font-size: 2.074rem;
     --h3-font-size: 1.728rem;
@@ -233,18 +212,118 @@ textarea {
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   :root {
     --h1-font-size: 1.802rem;
     --h2-font-size: 1.602rem;
     --h3-font-size: 1.424rem;
     --h4-font-size: 1.266rem;
     --h5-font-size: 1.125rem;
-    --body-font-size: 1rem;
-    --small-font-size: 0.889rem;
-    --tiny-font-size: 0.79rem;
+    --body-font-size: 0.9rem;
+    --small-font-size: 0.85rem;
+    --tiny-font-size: 0.8rem;
+  }
+
+  .container {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (max-width: 575px) {
+  :root {
+    --body-font-size: 0.85rem;
+    --small-font-size: 0.8rem;
+    --tiny-font-size: 0.75rem;
   }
 }
 
 @media (max-width: 374px) {
+  .container {
+    padding-inline: 1rem;
+  }
+}
+
+.buttons {
+  .buttons__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    padding-block: 5rem;
+
+    .buttons__link {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      align-items: center;
+      justify-items: center;
+
+      background: var(--container-color);
+      border: 1px solid hsl(200, 13%, 88%);
+      border-radius: 0.5rem;
+      padding: 2rem;
+      transition: transform 0.3s;
+
+      img {
+        width: 160px;
+        height: 160px;
+      }
+
+      h5 {
+        white-space: nowrap;
+      }
+    }
+
+    .buttons__link:hover {
+      transform: translateY(-0.5rem);
+    }
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@        BREAKPOINTS        @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media screen and (max-width: 1024px) {
+  .buttons {
+    .buttons__container {
+      gap: 1rem;
+
+      .buttons__link {
+        img {
+          width: 120px;
+          height: 120px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .buttons {
+    .buttons__container {
+      grid-template-columns: 1fr;
+
+      .buttons__link {
+        padding: 1.5rem;
+
+        img {
+          width: 96px;
+          height: 96px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .buttons {
+    .buttons__container {
+      .buttons__link {
+        img {
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+  }
 }
