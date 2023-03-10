@@ -14,9 +14,12 @@
     />
 
     <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-    <!-- @@@@@@ icons.getbootstrap.com  @@@@@@ -->
+    <!-- @@@@@@  fonts.google.com/icons @@@@@@ -->
     <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-    <link rel="stylesheet" href="./assets/css/bootstrap-icons.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/css/google-material-symbols-rounded.css"
+    />
 
     <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
     <!-- @@@@@@@@@@   swiperjs.com   @@@@@@@@@ -->
@@ -35,9 +38,125 @@
     <!-- @@@@@@@@@@@@@@  HEADER  @@@@@@@@@@@@@ -->
     <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
     <header id="header" class="header">
+      <div class="overlay"></div>
+
       <div class="container">
         <nav class="nav">
-          <img src="./assets/img/logo.png" alt="" />
+          <a href="#" class="nav__logo">
+            <img src="./assets/img/logo.png" alt="logo" />
+          </a>
+
+          <div class="nav__menu">
+            <div class="nav__menu-header">
+              <a href="#" class="nav__logo nav__menu-logo">
+                <img src="./assets/img/logo.png" alt="logo" />
+              </a>
+
+              <i class="material-symbols-rounded nav__close"> close </i>
+            </div>
+
+            <ul class="nav__list">
+              <li class="nav__item dropdown">
+                <div class="dropdown-box">
+                  <span class="nav__link-disabled"> آزمون آزمایشی تافل </span>
+                  <i class="material-symbols-rounded dropdown-button">
+                    arrow_drop_down
+                  </i>
+                </div>
+
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#" class="nav__link">
+                      تاریخ‌های برگزاری و ثبت نام
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav__link"> خرید ووچر </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav__link"> تغییر تاریخ </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav__link"> نتایج آزمون‌ها </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav__item dropdown">
+                <div class="dropdown-box">
+                  <span class="nav__link-disabled"> آزمون آزمایشی آیلتس </span>
+                  <i class="material-symbols-rounded dropdown-button">
+                    arrow_drop_down
+                  </i>
+                </div>
+
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#" class="nav__link">
+                      تاریخ‌های برگزاری و ثبت نام
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav__link"> خرید ووچر </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav__link"> تغییر تاریخ </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav__link"> نتایج آزمون‌ها </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav__item dropdown">
+                <div class="dropdown-box">
+                  <span class="nav__link-disabled">
+                    آزمون آزمایشی پی تی ای
+                  </span>
+                  <i class="material-symbols-rounded dropdown-button">
+                    arrow_drop_down
+                  </i>
+                </div>
+
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#" class="nav__link">
+                      تاریخ‌های برگزاری و ثبت نام
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav__link"> خرید ووچر </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav__link"> تغییر تاریخ </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav__link"> نتایج آزمون‌ها </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav__item">
+                <a href="#" class="nav__link"> وبلاگ </a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#footer" class="nav__link"> تماس با ما </a>
+              </li>
+            </ul>
+
+            <div class="nav__menu-buttons">
+              <a href="#">ورود</a>
+              <a href="#" class="button">ثبت نام</a>
+            </div>
+          </div>
+
+          <div class="nav__buttons">
+            <a href="#">ورود</a>
+            <a href="#" class="button">ثبت نام</a>
+          </div>
+
+          <i class="material-symbols-rounded nav__toggle"> menu </i>
         </nav>
       </div>
     </header>
@@ -63,7 +182,7 @@
 
               <p class="home__description">
                 آزمون آزمایشی تافل یا TOEFL iBT Mock Exam بهترین روش آمادگی تافل
-                می‌باشد. موسسه ماک 3 به دو صورت آزمون‌های آزمایشی را به داوطلبین
+                می‌باشد. موسسه ماک ۳ به دو صورت آزمون‌های آزمایشی را به داوطلبین
                 ارائه می‌دهد، آزمون آزمایشی آنلاین و آزمون آزمایشی حضوری که در
                 موسسه برگزار می‌شود.
               </p>
@@ -88,22 +207,118 @@
       </section>
 
       <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-      <!-- @@@@@@@@@@@@   BUTTONS   @@@@@@@@@@@@ -->
+      <!-- @@@@@@@@@@@@     CTA     @@@@@@@@@@@@ -->
       <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-      <section class="buttons">
+      <section class="cta">
         <div class="container">
-          <div class="buttons__container">
-            <a class="buttons__link" href="#">
+          <div class="cta__container">
+            <a class="cta__link" href="#">
               <img src="./assets/img/schedule.png" alt="" />
 
-              <h5>تاریخ‌های برگزاری آزمون</h5>
+              <h4>تاریخ‌های برگزاری آزمون</h4>
             </a>
 
-            <a class="buttons__link" href="#">
+            <a class="cta__link" href="#">
               <img src="./assets/img/cart.png" alt="" />
 
-              <h5>خرید شماره ووچر</h5>
+              <h4>خرید شماره ووچر</h4>
             </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+      <!-- @@@@@@@@@@@   FEATURES     @@@@@@@@@@ -->
+      <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+      <section class="features">
+        <div class="container">
+          <div class="section-title">
+            <h3>چرا آزمون‌های آزمایشی ماک ۳ ؟</h3>
+
+            <img src="./assets/img/highlight.png" alt="highlight" />
+          </div>
+
+          <div class="features__container">
+            <div class="features__box">
+              <div>
+                <i class="material-symbols-rounded"> headset_mic </i>
+
+                <h5>پخش فایل‌های ضبط شده در بخش اسپیکینگ</h5>
+              </div>
+
+              <p>
+                امکان دسترسی به فایل‌های اسپیکینگ پس از پایان آزمون و امکان پخش
+                فایل‌های صوتی برای پی‌بردن به نقاط ضعف و قوت.
+              </p>
+            </div>
+
+            <div class="features__box">
+              <div>
+                <i class="material-symbols-rounded"> fact_check </i>
+
+                <h5>نمایش ریز عملکرد در بخش‌های ریدینگ و لیسینینگ</h5>
+              </div>
+
+              <p>
+                مشاهده پاسخ‌های درست و نادرست، سرعت پاسخ‌گویی به هر سوال و میزان
+                سختی هر سوال در پایان آزمون.
+              </p>
+            </div>
+
+            <div class="features__box">
+              <div>
+                <i class="material-symbols-rounded"> captive_portal </i>
+
+                <h5>برگزاری آزمون آزمایشی آنلاین تافل</h5>
+              </div>
+
+              <p>
+                با استفاده از پلت‌فرم اختصاصی ماک ۳ امکان برگزاری آزمون بصورت
+                غیرحضوری و آنلاین <br />
+                (home edition) امکان پذیر می‌باشد.
+              </p>
+            </div>
+
+            <div class="features__box">
+              <div>
+                <i class="material-symbols-rounded"> leaderboard </i>
+
+                <h5>نمودار‌های تحلیلی و آماری</h5>
+              </div>
+
+              <p>
+                مشاهده نمودار مقایسه‌ی نمرات داوطلبان ، نمودار دامنه نمرات کسب
+                شده و نمودار پیشرفت در پروفایل داوطلب.
+              </p>
+            </div>
+
+            <div class="features__box">
+              <div>
+                <i class="material-symbols-rounded"> quick_reference_all </i>
+
+                <h5>بازبینی و بررسی فایل رایتینگ</h5>
+              </div>
+
+              <p>
+                بازبینی رایتینگ نوشته شده به‌همراه اطلاعاتی نظیر تعداد کلمات
+                نوشته شده، تعداد غلط‌های نگارشی و سرعت تایپ داوطلب.
+              </p>
+            </div>
+
+            <div class="features__box">
+              <div>
+                <i class="material-symbols-rounded">
+                  heap_snapshot_thumbnail
+                </i>
+
+                <h5>نمره‌دهی بر اساس جدول نمره‌دهی</h5>
+              </div>
+
+              <p>
+                نمره‌دهی بر اساس جدول نمره‌دهی مختص به هر آزمون که باعث نزدیکی
+                نمره کسب شده به نمره‌ی آزمون اصلی می‌شود.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -112,7 +327,134 @@
     <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
     <!-- @@@@@@@@        FOOTER        @@@@@@@ -->
     <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-    <footer class="footer" style="height: 1000px"></footer>
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="footer__container">
+          <div class="footer__call">
+            <h5>
+              در روز‌های کاری از ساعت 9 صبح تا ساعت 18 عصر پاسخگوی شما هستیم.
+            </h5>
+
+            <a href="tel:+982147624848">
+              <h5>۴۷۶۲۴۸۴۸ - ۰۲۱</h5>
+
+              <img src="./assets/img/call-center-agent.png" alt="" />
+            </a>
+          </div>
+
+          <div class="footer__maps">
+            <div class="footer__title">
+              <h5 class="footer__title-name">آدرس مراکز آزمون</h5>
+
+              <div class="footer__title-line"></div>
+            </div>
+
+            <div class="footer__maps-container">
+              <a
+                class="footer__map"
+                href="https://goo.gl/maps/xUTYcJxBGWcLqS5T8"
+                target="blank"
+              >
+                <i class="material-symbols-rounded"> location_on </i>
+
+                <div class="footer__map-description">
+                  <span> مرکز آزمون تهران : </span>
+                  <br />
+                  <span>
+                    خیابان ولیعصر - بعد از تقاطع بهشتی - کوچه نادر - پلاک ۴
+                  </span>
+                </div>
+              </a>
+
+              <a
+                class="footer__map"
+                href="https://goo.gl/maps/tc6kQUVmsKKmxYve9"
+                target="blank"
+              >
+                <i class="material-symbols-rounded"> location_on </i>
+
+                <div class="footer__map-description">
+                  <span> مرکز آزمون اصفهان : </span>
+                  <br />
+                  <span>
+                    میدان آزادی - ابتدای بلوار دانشگاه - کوچه صفایی - مجتمع
+                    آموزشی متاکو
+                  </span>
+                </div>
+              </a>
+
+              <a
+                class="footer__map"
+                href="https://goo.gl/maps/6NskcoVXm4dVuweZ6"
+                target="blank"
+              >
+                <i class="material-symbols-rounded"> location_on </i>
+
+                <div class="footer__map-description">
+                  <span> مرکز آزمون تبریز : </span>
+                  <br />
+                  <span>
+                    دانشگاه تبریز - ساختمان خوارزمی (علوم پایه سابق) - طبقه ۲
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer__about">
+            <div class="footer__title">
+              <h5 class="footer__title-name">درباره موسسه ماک ۳</h5>
+
+              <div class="footer__title-line"></div>
+            </div>
+
+            <div class="footer__about-container">
+              <small class="footer__about-description">
+                موسسه ماک ۳ مجری برگزاری آزمون‌های آزمایشی بین المللی زبان در
+                ایران با اتکا به دانش و توانمندی‌های متخصصان و اساتید برتر
+                آزمون‌های بین المللی زبان و با هدف ارتقاء سطح علمی و بعنوان حامی
+                داوطلبان در مسیر سخت اپلای پا به عرصه ظهور نهاد. در این میان با
+                استعانت از خداوند متعال و تلاش بی وفقه اساتید، متخصصان و سایر
+                اعضاء توانست بعنوان برترین برند برگزارکننده آزمون‌های آزمایشی
+                تافل در ایران خود را مطرح نماید. خط مشی ما ارائه خدمات با کیفیت
+                آموزشی به داوطلبان آزمون‌های بین المللی زبان بوده و در این راه
+                از هیچ تلاشی فروگذار نخواهیم بود.
+              </small>
+
+              <div class="footer__about-logos">
+                <div class="footer__about-logo">
+                  <img src="./assets/img/footer-logo-1.png" alt="logo" />
+                </div>
+
+                <div class="footer__about-logo">
+                  <img src="./assets/img/footer-logo-2.png" alt="logo" />
+                </div>
+
+                <div class="footer__about-logo">
+                  <img src="./assets/img/footer-logo-3.png" alt="logo" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer__copyright">
+            <small> کلیه حقوق این سایت متعلق به موسسه ماک 3 می‌باشد. </small>
+
+            <small dir="ltr"> mock3.org - 2023 &copy; Copyright </small>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__highlight">
+        <div dir="ltr" class="container">
+          <small>
+            TOEFL is a registered trademark of Educational Testing Service
+            (ETS). Mock3 is not approved or endorsed by ETS.
+          </small>
+        </div>
+      </div>
+    </footer>
+
 
     <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
     <!-- @@@@@@@@      SCROLL UP       @@@@@@@ -->

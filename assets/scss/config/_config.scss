@@ -25,15 +25,14 @@
   --tiny-font-size: 0.64rem;
 
   --primary-color: hsl(42, 100%, 55%);
-  --secondary-color: hsl(202, 95%, 15%);
   --secondary-color: hsl(203, 95%, 30%);
-  --bg-dark-color: hsl(195, 14%, 11%);
-  --bg-light-color: hsl(200, 13%, 95%);
+  --bg-color-dark: hsl(195, 14%, 11%);
+  --bg-color-light: hsl(200, 13%, 95%);
   --container-color: hsl(200, 13%, 92%);
 
   --text-color-light: hsl(200, 13%, 70%);
   --title-color-light: hsl(200, 13%, 95%);
-  --text-color-dark: hsl(200, 13%, 95%);
+  --text-color-dark: hsl(200, 13%, 25%);
   --title-color-dark: hsl(200, 13%, 5%);
 }
 
@@ -49,7 +48,7 @@
 
 body {
   font-size: var(--body-font-size);
-  background: var(--bg-light-color);
+  background: var(--bg-color-light);
   color: var(--text-color-dark);
 }
 
@@ -121,15 +120,6 @@ textarea {
   resize: none;
 }
 
-.button {
-  display: inline-block;
-  text-align: center;
-  color: var(--title-color-light);
-  background: var(--secondary-color);
-  padding: 0.7rem 3rem;
-  border-radius: 10rem;
-}
-
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // @@@@@@@@@  REUSABLE CLASSES   @@@@@@@@@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -146,10 +136,40 @@ textarea {
 .section-border {
 }
 
+// .section-title {
+//   position: relative;
+//   width: max-content;
+//   color: hsl(203, 95%, 30%);
+// }
+
+// .section-title:after {
+//   content: 'چرا آزمون‌های آزمایشی ماک ۳ ؟';
+//   position: absolute;
+//   right: 3rem;
+//   bottom: -1.5rem;
+//   width: max-content;
+//   color: hsla(42, 100%, 55%, 0.2);
+// }
+
 .section-title {
+  text-align: center;
+  width: max-content;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+
+  h3 {
+    color: hsl(203, 95%, 30%);
+    margin-bottom: 0.5rem;
+  }
 }
 
-.section-subtitle {
+.button {
+  display: inline-block;
+  text-align: center;
+  color: var(--title-color-light);
+  background: var(--secondary-color);
+  padding: 0.7rem 3rem;
+  border-radius: 10rem;
 }
 
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -240,90 +260,5 @@ textarea {
 @media (max-width: 374px) {
   .container {
     padding-inline: 1rem;
-  }
-}
-
-.buttons {
-  .buttons__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-
-    padding-block: 5rem;
-
-    .buttons__link {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      align-items: center;
-      justify-items: center;
-
-      background: var(--container-color);
-      border: 1px solid hsl(200, 13%, 88%);
-      border-radius: 0.5rem;
-      padding: 2rem;
-      transition: transform 0.3s;
-
-      img {
-        width: 160px;
-        height: 160px;
-      }
-
-      h5 {
-        white-space: nowrap;
-      }
-    }
-
-    .buttons__link:hover {
-      transform: translateY(-0.5rem);
-    }
-  }
-}
-
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-// @@@@@@@@@        BREAKPOINTS        @@@@@@@@@
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@media screen and (max-width: 1024px) {
-  .buttons {
-    .buttons__container {
-      gap: 1rem;
-
-      .buttons__link {
-        img {
-          width: 120px;
-          height: 120px;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .buttons {
-    .buttons__container {
-      grid-template-columns: 1fr;
-
-      .buttons__link {
-        padding: 1.5rem;
-
-        img {
-          width: 96px;
-          height: 96px;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 374px) {
-  .buttons {
-    .buttons__container {
-      .buttons__link {
-        img {
-          width: 80px;
-          height: 80px;
-        }
-      }
-    }
   }
 }
