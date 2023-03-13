@@ -1,6 +1,4 @@
 .features {
-  padding-block: 5rem;
-
   .features__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -12,6 +10,11 @@
       border: 1px solid hsl(200, 13%, 88%);
       border-radius: 0.5rem;
       padding: 2rem 1.5rem;
+      transition: box-shadow 0.3s;
+
+      div {
+        transition: transform 0.3s;
+      }
 
       i {
         background: linear-gradient(
@@ -31,30 +34,12 @@
       }
     }
 
-    .features__box:hover i {
-      animation: accordion 0.5s;
+    .features__box:hover {
+      box-shadow: 0 5px 10px hsl(200, 13%, 80%);
     }
 
-    @keyframes accordion {
-      0% {
-        transform: translateY(0);
-      }
-
-      25% {
-        transform: translateY(-6px);
-      }
-
-      50% {
-        transform: translateY(0);
-      }
-
-      75% {
-        transform: translateY(-3px);
-      }
-
-      100% {
-        transform: translateY(0);
-      }
+    .features__box:hover div {
+      transform: translateY(-5px);
     }
   }
 }

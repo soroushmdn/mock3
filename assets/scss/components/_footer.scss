@@ -2,7 +2,7 @@
   position: relative;
   background: var(--bg-color-dark);
   color: var(--text-color-light);
-  margin-top: 2rem;
+  margin-top: 5rem;
 
   .footer__title {
     display: flex;
@@ -26,6 +26,10 @@
     background: hsl(195, 14%, 15%);
     text-align: center;
     padding-block: 1rem;
+
+    small {
+      font-size: var(--tiny-font-size);
+    }
   }
 
   .footer__container {
@@ -129,26 +133,54 @@
 
         .footer__about-logos {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(2, 1fr);
           gap: 1rem;
 
           .footer__about-logo {
-            background: hsl(200, 13%, 90%);
+            background: hsl(195, 14%, 15%);
+            border: 1px solid hsla(200, 13%, 70%, 0.3);
             padding: 0.5rem;
             border-radius: 0.5rem;
-            text-align: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
         }
       }
     }
 
     .footer__copyright {
-      display: flex;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
       align-items: center;
-      justify-content: space-between;
-      gap: 0.5rem;
+      gap: 3rem;
       padding-block: 1rem;
       border-top: 1px solid hsl(195, 14%, 20%);
+
+      a {
+        background: hsl(201, 85%, 55%);
+        padding: 1rem 1.5rem;
+        border-radius: 0.5rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        small {
+          color: var(--title-color-light);
+        }
+
+        img {
+          width: 24px;
+          transition: transform 0.3s;
+        }
+      }
+
+      a:hover img {
+        transform: translate(3px, -3px);
+      }
     }
   }
 }
@@ -158,8 +190,6 @@
 // @@@@@@@@@@@@@@@@7@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @media screen and (max-width: 1024px) {
   .footer {
-    margin-top: 4rem;
-
     .footer__container {
       padding-top: 8rem;
 
@@ -183,11 +213,11 @@
       .footer__about {
         .footer__about-container {
           gap: 2rem;
-
-          .footer__about-logos {
-            gap: 0.5rem;
-          }
         }
+      }
+
+      .footer__copyright {
+        gap: 2rem;
       }
     }
   }
@@ -195,6 +225,8 @@
 
 @media screen and (max-width: 767px) {
   .footer {
+    margin-top: 7rem;
+
     .footer__container {
       .footer__maps {
         .footer__maps-container {
@@ -212,24 +244,16 @@
           gap: 1.5rem;
 
           .footer__about-logos {
-            grid-template-columns: repeat(3, 80px);
-            justify-content: center;
-
-            .footer__about-logo {
-              padding: 0.3rem;
-            }
+            grid-template-columns: repeat(2, 1fr);
           }
         }
       }
-    }
-  }
-}
 
-@media screen and (max-width: 576px) {
-  .footer {
-    .footer__container {
       .footer__copyright {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 1rem;
       }
     }
   }

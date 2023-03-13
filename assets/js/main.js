@@ -57,12 +57,43 @@ function homeAnimation() {
 
   setTimeout(() => {
     homeText.textContent = 'جامع ترین';
-  }, 4000);
+  }, 3000);
 
   setTimeout(() => {
     homeText.textContent = 'بروز ترین';
-  }, 8000);
+  }, 6000);
 }
 
 homeAnimation();
-setInterval(homeAnimation, 12000);
+setInterval(homeAnimation, 9000);
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@    swiperjs.com (TESTIMONIAL SECTION)   @@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+const testimonialsSwiper = new Swiper('.testimonials__swiper', {
+  spaceBetween: 32,
+  loop: 'true',
+  grabCursor: 'true',
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+  },
+});
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@          ACCORDION MENU           @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+const accordion = document.querySelectorAll('.accordion');
+
+accordion.forEach((accordion) => {
+  accordion.addEventListener('click', function () {
+    this.classList.toggle('show-accordion');
+  });
+});

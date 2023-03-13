@@ -1,0 +1,101 @@
+.faq {
+  .faq__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+    column-gap: 2rem;
+  }
+
+  .accordions-right,
+  .accordions-left {
+    display: grid;
+    row-gap: 1.5rem;
+  }
+
+  .accordion {
+    overflow: hidden;
+
+    background: var(--container-color);
+    border: 1px solid hsl(200, 13%, 88%);
+    border-radius: 0.5rem;
+    padding: 1.5rem 1.2rem 0.5rem;
+    transition: padding-bottom 0.3s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .accordion__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+
+    i {
+      margin-right: auto;
+      background: linear-gradient(
+        45deg,
+        hsla(42, 100%, 55%, 0.5),
+        hsla(203, 95%, 30%, 0.2)
+      );
+      padding: 0.1rem;
+      border-radius: 0.2rem;
+      transition: 0.3s;
+    }
+  }
+
+  .accordion__content {
+    max-height: 0px;
+    opacity: 0;
+    transition: max-height 0.5s, opacity 0.5s;
+  }
+
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  // @@@@@@@@@        JS CLASSES         @@@@@@@@@
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  .show-accordion {
+    padding-bottom: 1.5rem;
+  }
+
+  .show-accordion .accordion__header p {
+    color: var(--title-color-dark);
+    font-weight: 600;
+  }
+
+  .show-accordion .accordion__content {
+    max-height: 100px;
+    opacity: 1;
+  }
+
+  .show-accordion .accordion__header i {
+    transform: rotate(180deg);
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@        BREAKPOINTS        @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media (max-width: 1024px) {
+  .faq {
+    .faq__container {
+      grid-template-columns: 1fr;
+      row-gap: 1rem;
+    }
+
+    .accordions-right,
+    .accordions-left {
+      row-gap: 1rem;
+    }
+
+    .accordion {
+      padding: 1rem 1.2rem 0.5rem;
+    }
+
+    .accordion__header {
+      margin-bottom: 0.5rem;
+    }
+
+    .show-accordion {
+      padding-bottom: 1rem;
+    }
+  }
+}

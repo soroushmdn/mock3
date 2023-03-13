@@ -4,33 +4,38 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 
-    padding-block: 5rem;
-
     .cta__link {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      align-items: center;
-      justify-items: center;
-
       background: var(--container-color);
       border: 1px solid hsl(200, 13%, 88%);
       border-radius: 0.5rem;
       padding: 2rem;
-      transition: transform 0.3s;
+      transition: box-shadow 0.3s;
 
-      img {
-        width: 136px;
-        height: 136px;
-      }
+      div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        align-items: center;
+        justify-items: center;
+        transition: transform 0.3s;
 
-      h4 {
-        white-space: nowrap;
+        img {
+          width: 136px;
+          height: 136px;
+        }
+
+        h4 {
+          white-space: nowrap;
+        }
       }
     }
 
     .cta__link:hover {
-      transform: translateY(-0.5rem);
+      box-shadow: 0 5px 10px hsl(200, 13%, 80%);
+    }
+
+    .cta__link:hover div {
+      transform: translateY(-5px);
     }
   }
 }
@@ -43,7 +48,7 @@
     .cta__container {
       gap: 1rem;
 
-      .cta__link {
+      .cta__link div {
         grid-template-columns: 1fr;
 
         img {
@@ -70,7 +75,7 @@
 @media screen and (max-width: 374px) {
   .cta {
     .cta__container {
-      .cta__link {
+      .cta__link div {
         img {
           width: 80px;
           height: 80px;

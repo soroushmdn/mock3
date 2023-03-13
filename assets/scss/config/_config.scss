@@ -15,14 +15,14 @@
 // @@@@@@@@@@@@@  VARIABLES  @@@@@@@@@@@@@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 :root {
-  --h1-font-size: 3.052rem;
+  --h1-font-size: 3rem;
   --h2-font-size: 2.441rem;
   --h3-font-size: 1.953rem;
   --h4-font-size: 1.563rem;
   --h5-font-size: 1.25rem;
   --body-font-size: 1rem;
   --small-font-size: 0.8rem;
-  --tiny-font-size: 0.64rem;
+  --tiny-font-size: 0.7rem;
 
   --primary-color: hsl(42, 100%, 55%);
   --secondary-color: hsl(203, 95%, 30%);
@@ -32,7 +32,7 @@
 
   --text-color-light: hsl(200, 13%, 70%);
   --title-color-light: hsl(200, 13%, 95%);
-  --text-color-dark: hsl(200, 13%, 25%);
+  --text-color-dark: hsl(200, 13%, 28%);
   --title-color-dark: hsl(200, 13%, 5%);
 }
 
@@ -131,25 +131,9 @@ textarea {
 }
 
 .section {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
 }
-
-.section-border {
-}
-
-// .section-title {
-//   position: relative;
-//   width: max-content;
-//   color: hsl(203, 95%, 30%);
-// }
-
-// .section-title:after {
-//   content: 'چرا آزمون‌های آزمایشی ماک ۳ ؟';
-//   position: absolute;
-//   right: 3rem;
-//   bottom: -1.5rem;
-//   width: max-content;
-//   color: hsla(42, 100%, 55%, 0.2);
-// }
 
 .section-title {
   text-align: center;
@@ -168,9 +152,29 @@ textarea {
   text-align: center;
   color: var(--title-color-light);
   background: var(--secondary-color);
-  padding: 0.7rem 3rem;
-  border-radius: 10rem;
+  padding: 0.7rem 2.5rem;
+  border-radius: 0.3rem;
+  transition: background 0.4s;
 }
+
+.button:hover {
+  background: hsl(203, 95%, 27%);
+}
+
+// .section-title {
+//   position: relative;
+//   width: max-content;
+//   color: hsl(203, 95%, 30%);
+// }
+
+// .section-title:after {
+//   content: 'چرا آزمون‌های آزمایشی ماک ۳ ؟';
+//   position: absolute;
+//   right: 3rem;
+//   bottom: -1.5rem;
+//   width: max-content;
+//   color: hsla(42, 100%, 55%, 0.2);
+// }
 
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // @@@@@@@@@     SCROLL UP      @@@@@@@@@
@@ -228,7 +232,15 @@ textarea {
     --h5-font-size: 1.2rem;
     --body-font-size: 1rem;
     --small-font-size: 0.833rem;
-    --tiny-font-size: 0.694rem;
+  }
+
+  .section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .section-title {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -241,11 +253,15 @@ textarea {
     --h5-font-size: 1.125rem;
     --body-font-size: 0.9rem;
     --small-font-size: 0.85rem;
-    --tiny-font-size: 0.8rem;
   }
 
   .container {
     padding-inline: 1.5rem;
+  }
+
+  .section {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -253,7 +269,7 @@ textarea {
   :root {
     --body-font-size: 0.85rem;
     --small-font-size: 0.8rem;
-    --tiny-font-size: 0.75rem;
+    --tiny-font-size: 0.6rem;
   }
 }
 
@@ -262,3 +278,15 @@ textarea {
     padding-inline: 1rem;
   }
 }
+
+// @media (min-width: 2048px) {
+//   body {
+//     zoom: 1.5;
+//   }
+// }
+
+// @media (min-width: 3840px) {
+//   body {
+//     zoom: 2;
+//   }
+// }

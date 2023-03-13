@@ -3,13 +3,16 @@
   overflow: hidden;
   background: var(--bg-color-dark);
   color: var(--text-color-light);
-  padding-block: 10rem;
 
   .home__container {
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 4rem 5rem;
+    gap: 3rem 6rem;
+
+    height: 100vh;
+    align-content: center;
+    padding-top: 85px;
   }
 
   .home__data {
@@ -33,7 +36,7 @@
         width: 100%;
         height: 100%;
         background: var(--bg-color-dark);
-        animation: homeAnimation 4s infinite steps(30);
+        animation: homeAnimation 3s infinite steps(30);
       }
 
       @keyframes homeAnimation {
@@ -52,7 +55,7 @@
     }
 
     .home__description {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       text-align: justify;
     }
   }
@@ -63,14 +66,14 @@
     gap: 1.5rem;
     border: 1px solid hsla(200, 13%, 70%, 0.3);
     border-radius: 0.5rem;
-    padding: 2rem;
+    padding: 1.5rem 2rem;
 
     .home__stats-number {
       display: flex;
       align-items: center;
       gap: 0.3rem;
       line-height: 1;
-      color: var(--secondary-color);
+      color: var(--primary-color);
     }
 
     .home__stats-number span:last-child {
@@ -85,6 +88,7 @@
   .home__img {
     width: 100%;
     height: 100%;
+    align-self: center;
     grid-row: 1/3;
     grid-column: 2/3;
   }
@@ -101,13 +105,13 @@
   }
 
   .bg-circle-1 {
-    background: var(--primary-color);
+    background: var(--secondary-color);
     bottom: -3rem;
     right: 0;
   }
 
   .bg-circle-2 {
-    background: var(--secondary-color);
+    background: var(--primary-color);
     top: 10rem;
     left: 0;
   }
@@ -118,13 +122,21 @@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @media screen and (max-width: 1024px) {
   .home {
-    padding-block: 8rem;
-
     .home__container {
-      gap: 3rem 2rem;
+      gap: 3rem;
+      height: auto;
+      padding-top: (80px + 64px);
+      padding-bottom: 5rem;
+    }
+
+    .home__img {
+      grid-row: auto;
+      grid-column: auto;
     }
 
     .home__stats {
+      grid-column: 1/3;
+
       .home__stats-number span:last-child {
         font-size: 2.3rem;
       }
@@ -145,11 +157,11 @@
 
 @media screen and (max-width: 767px) {
   .home {
-    padding-block: 5rem;
-
     .home__container {
       grid-template-columns: 1fr;
-      gap: 2rem;
+      gap: 2.5rem;
+      padding-top: (48px + 64px);
+      padding-bottom: 3rem;
     }
 
     .home__img {
@@ -158,7 +170,9 @@
     }
 
     .home__stats {
+      grid-column: auto;
       padding: 1.5rem;
+
       .home__stats-number span:last-child {
         font-size: 1.8rem;
       }
