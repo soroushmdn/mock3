@@ -111,9 +111,13 @@
   }
 
   .bg-circle-2 {
+   
     background: var(--primary-color);
     top: 10rem;
     left: 0;
+
+    width: 220px;
+    height: 220px;
   }
 }
 

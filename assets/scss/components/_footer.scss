@@ -158,6 +158,16 @@
       padding-block: 1rem;
       border-top: 1px solid hsl(195, 14%, 20%);
 
+      div {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+
+        img {
+          width: 80px;
+        }
+      }
+
       a {
         background: hsl(201, 85%, 55%);
         padding: 1rem 1.5rem;
@@ -253,7 +263,12 @@
         grid-template-columns: 1fr;
         justify-items: center;
         text-align: center;
-        gap: 1rem;
+        gap: 1.5rem;
+
+        div {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
       }
     }
   }

@@ -97,3 +97,16 @@ accordion.forEach((accordion) => {
     this.classList.toggle('show-accordion');
   });
 });
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@            SCROLL UP              @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+const scrollUp = document.querySelector('.scrollup');
+
+window.addEventListener('scroll', function () {
+  if (this.scrollY > 50) {
+    scrollUp.classList.add('show-scrollup');
+  } else {
+    scrollUp.classList.remove('show-scrollup');
+  }
+});

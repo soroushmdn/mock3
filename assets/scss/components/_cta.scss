@@ -1,86 +1,102 @@
 .cta {
+  .container {
+    padding-top: 2rem;
+  }
+
   .cta__container {
+    background: var(--primary-color);
+    border-radius: 0.5rem;
+    padding-inline: 3rem;
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 
-    .cta__link {
-      background: var(--container-color);
-      border: 1px solid hsl(200, 13%, 88%);
-      border-radius: 0.5rem;
-      padding: 2rem;
-      transition: box-shadow 0.3s;
+    .cta__data {
+      padding-block: 3rem;
 
-      div {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        align-items: center;
-        justify-items: center;
-        transition: transform 0.3s;
-
-        img {
-          width: 136px;
-          height: 136px;
-        }
-
-        h4 {
-          white-space: nowrap;
-        }
+      h3 {
+        text-align: justify;
+        margin-bottom: 2rem;
+        color: hsl(203, 95%, 15%);
       }
     }
 
-    .cta__link:hover {
-      box-shadow: 0 5px 10px hsl(200, 13%, 80%);
-    }
+    .cta__image {
+      position: relative;
 
-    .cta__link:hover div {
-      transform: translateY(-5px);
+      img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 470px;
+        height: 420px;
+      }
     }
   }
 }
 
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-// @@@@@@@@@        BREAKPOINTS        @@@@@@@@@
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .cta {
     .cta__container {
-      gap: 1rem;
+      padding-inline: 2rem;
+      gap: 0;
 
-      .cta__link div {
-        grid-template-columns: 1fr;
+      .cta__data {
+        padding-block: 2rem;
 
+        h3 {
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      .cta__image {
         img {
-          width: 96px;
-          height: 96px;
+          height: 350px;
         }
       }
     }
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .cta {
+    .container {
+      padding-top: 0;
+    }
+
     .cta__container {
       grid-template-columns: 1fr;
+      grid-template-rows: 1fr 2fr;
+      padding-inline: 1.5rem;
+      gap: 1rem;
 
-      .cta__link {
-        padding: 1.5rem;
+      .cta__data {
+        padding: 1.5rem 0 0 0;
+        text-align: center;
+
+        h3 {
+          text-align: center;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .cta__image {
+        img {
+          width: auto;
+          height: 100%;
+          right: 0;
+          margin: auto;
+        }
       }
     }
   }
 }
 
-@media screen and (max-width: 374px) {
+@media (max-width: 450px) {
   .cta {
     .cta__container {
-      .cta__link div {
-        img {
-          width: 80px;
-          height: 80px;
-        }
-      }
+      grid-template-rows: 1fr 1.5fr;
     }
   }
 }

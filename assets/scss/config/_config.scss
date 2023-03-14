@@ -161,35 +161,20 @@ textarea {
   background: hsl(203, 95%, 27%);
 }
 
-// .section-title {
-//   position: relative;
-//   width: max-content;
-//   color: hsl(203, 95%, 30%);
-// }
-
-// .section-title:after {
-//   content: 'چرا آزمون‌های آزمایشی ماک ۳ ؟';
-//   position: absolute;
-//   right: 3rem;
-//   bottom: -1.5rem;
-//   width: max-content;
-//   color: hsla(42, 100%, 55%, 0.2);
-// }
-
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // @@@@@@@@@     SCROLL UP      @@@@@@@@@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 .scrollup {
   position: fixed;
-  left: 2rem;
+  left: 1.5rem;
   bottom: -30%;
   z-index: 99;
   opacity: 0.5;
-  transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
   i {
-    color: hsl(207, 65%, 60%);
-    font-size: 2rem;
+    color: hsl(42, 100%, 55%);
+    font-size: 3rem;
   }
 }
 
@@ -205,19 +190,19 @@ textarea {
 // @@@@@@@@@     SCROLL BAR     @@@@@@@@@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 ::-webkit-scrollbar {
-  background: hsl(207, 4%, 85%);
+  background: hsl(200, 13%, 80%);
   width: 10px;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(207, 4%, 70%);
+  background: hsl(200, 13%, 60%);
   width: 10px;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(207, 4%, 60%);
+  background: hsl(200, 13%, 50%);
 }
 
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -279,14 +264,14 @@ textarea {
   }
 }
 
-// @media (min-width: 2048px) {
-//   body {
-//     zoom: 1.5;
-//   }
-// }
+@media (min-width: 2048px) {
+  body {
+    zoom: 1.5;
+  }
+}
 
-// @media (min-width: 3840px) {
-//   body {
-//     zoom: 2;
-//   }
-// }
+@media (min-width: 3840px) {
+  body {
+    zoom: 2;
+  }
+}

@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 100;
   color: var(--text-color-light);
   font-size: 0.9rem;
 }
@@ -172,7 +172,7 @@
   }
 
   .nav__menu {
-    background: hsl(195, 14%, 15%);
+    background: hsl(195, 14%, 11%);
     position: fixed;
     right: -100%;
     top: 0;
@@ -241,6 +241,7 @@
       transition: opacity 0.5s ease-in-out, max-height 1s ease-in-out;
 
       li {
+        background: hsl(195, 14%, 11%);
         padding-right: 0;
         padding-left: 0;
       }
@@ -271,7 +272,7 @@
   }
 
   .nav__menu-buttons {
-    background: hsl(195, 14%, 15%);
+    background: hsl(195, 14%, 11%);
     border-top: 1px solid hsl(195, 14%, 20%);
     position: absolute;
     bottom: 0;
