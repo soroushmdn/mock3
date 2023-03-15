@@ -30,9 +30,9 @@
   --bg-color-light: hsl(200, 13%, 95%);
   --container-color: hsl(200, 13%, 92%);
 
-  --text-color-light: hsl(200, 13%, 70%);
+  --text-color-light: hsl(200, 13%, 80%);
   --title-color-light: hsl(200, 13%, 95%);
-  --text-color-dark: hsl(200, 13%, 28%);
+  --text-color-dark: hsl(200, 13%, 25%);
   --title-color-dark: hsl(200, 13%, 5%);
 }
 
@@ -114,10 +114,6 @@ textarea {
 
 button {
   cursor: pointer;
-}
-
-textarea {
-  resize: none;
 }
 
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -208,6 +204,18 @@ textarea {
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // @@@@@@@@@    BREAKPOINTS     @@@@@@@@@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media (min-width: 3840px) {
+  body {
+    zoom: 2;
+  }
+}
+
+@media (min-width: 2048px) {
+  body {
+    zoom: 1.5;
+  }
+}
+
 @media (max-width: 1024px) {
   :root {
     --h1-font-size: 2.488rem;
@@ -261,17 +269,5 @@ textarea {
 @media (max-width: 374px) {
   .container {
     padding-inline: 1rem;
-  }
-}
-
-@media (min-width: 2048px) {
-  body {
-    zoom: 1.5;
-  }
-}
-
-@media (min-width: 3840px) {
-  body {
-    zoom: 2;
   }
 }

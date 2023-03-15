@@ -1,0 +1,249 @@
+.form-body {
+  background: hsl(200, 13%, 92%);
+}
+
+.form__container {
+  background: hsl(200, 13%, 92%);
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 3rem;
+
+  display: grid;
+  place-items: center;
+
+  .form__shape {
+    position: absolute;
+    width: 200px;
+  }
+
+  .form__shape-1 {
+    top: 25%;
+    right: 0;
+  }
+
+  .form__shape-2 {
+    bottom: 25%;
+    left: 0;
+  }
+
+  .form {
+    position: relative;
+    max-width: 767px;
+    width: 100%;
+
+    .form__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      padding-inline: 0.5rem;
+
+      .form__logo {
+        font-family: 'title';
+        font-size: 2rem;
+        color: var(--primary-color);
+      }
+
+      .form__link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        a {
+          color: hsl(203, 95%, 40%);
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .form__box {
+      background: hsl(200, 13%, 97%);
+      padding: 3rem;
+      border-radius: 0.5rem;
+      border: 1px solid hsl(200, 13%, 88%);
+
+      h4 {
+        margin-bottom: 1.5rem;
+        color: var(--secondary-color);
+      }
+
+      form {
+        display: grid;
+        gap: 1rem;
+
+        .form__group {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+        }
+
+        .form__field {
+          .input__field {
+            position: relative;
+
+            input {
+              width: 100%;
+              height: 100%;
+              padding: 1rem 3rem 1rem 1rem;
+              border: 1px solid hsl(200, 13%, 85%);
+              border-radius: 0.4rem;
+            }
+
+            input[type='password'] {
+              padding: 1rem 3rem;
+            }
+
+            i {
+              display: flex;
+              position: absolute;
+              right: 1rem;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+
+            i,
+            input::placeholder {
+              color: hsl(200, 13%, 50%);
+            }
+
+            i.eyeicon {
+              right: auto;
+              left: 1rem;
+              cursor: pointer;
+            }
+
+            input:focus {
+              border: 1px solid hsl(203, 95%, 40%);
+            }
+
+            input:focus ~ i {
+              color: hsl(203, 95%, 40%);
+            }
+          }
+        }
+
+        .form__checkbox {
+          display: flex;
+          align-items: center;
+          padding: 0 0.5rem;
+
+          a {
+            display: inline-block;
+            margin-right: auto;
+            color: hsl(203, 95%, 40%);
+          }
+
+          input {
+            accent-color: hsl(203, 95%, 40%);
+            margin-left: 0.5rem;
+            width: 15px;
+            height: 15px;
+          }
+
+          a:hover {
+            text-decoration: underline;
+          }
+        }
+
+        input[type='submit'] {
+          background: hsl(42, 100%, 55%);
+          color: var(--title-color-dark);
+          font-weight: 600;
+          cursor: pointer;
+          margin-top: 2rem;
+          padding: 1rem;
+          border-radius: 0.4rem;
+          transition: background 0.3s;
+        }
+
+        input[type='submit']:hover {
+          background: hsl(42, 100%, 50%);
+        }
+      }
+    }
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@        BREAKPOINTS        @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+@media (max-width: 1024px) {
+  .form__container {
+    .form__shape-1 {
+      top: 5%;
+    }
+
+    .form__shape-2 {
+      bottom: 5%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .form__container {
+    height: auto;
+    padding: 2rem 1rem;
+
+    .form__shape-1 {
+      top: 25%;
+    }
+
+    .form__shape-2 {
+      bottom: 25%;
+    }
+
+    .form {
+      .form__top {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+
+        .form__logo {
+          font-size: 1.5rem;
+        }
+      }
+
+      .form__box {
+        padding: 2rem 1rem;
+
+        h4 {
+          margin-bottom: 1rem;
+        }
+
+        form {
+          .form__group {
+            grid-template-columns: 1fr;
+          }
+
+          .form__checkbox {
+            font-size: 0.8rem;
+          }
+
+          input[type='submit'] {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .form__container {
+    .form {
+      .form__box {
+        form {
+          .form__checkbox {
+            font-size: 0.65rem;
+          }
+        }
+      }
+    }
+  }
+}
