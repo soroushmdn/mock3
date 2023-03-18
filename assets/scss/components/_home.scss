@@ -7,12 +7,15 @@
   .home__container {
     position: relative;
     display: grid;
+    align-items: center;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem 6rem;
 
-    height: 100vh;
-    align-content: center;
-    padding-top: 85px;
+    padding-top: 15rem;
+    padding-bottom: 10rem;
+
+    padding-top: 10rem;
+    padding-bottom: 5rem;
   }
 
   .home__data {
@@ -111,7 +114,6 @@
   }
 
   .bg-circle-2 {
-   
     background: var(--primary-color);
     top: 10rem;
     left: 0;
@@ -124,18 +126,19 @@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // @@@@@@@@@        BREAKPOINTS        @@@@@@@@@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1440px) {
   .home {
     .home__container {
-      gap: 3rem;
+      gap: 2rem 3rem;
       height: auto;
-      padding-top: (80px + 64px);
-      padding-bottom: 5rem;
+      padding-top: 7.5rem;
+      padding-bottom: 3rem;
     }
 
     .home__img {
       grid-row: auto;
       grid-column: auto;
+      height: 300px;
     }
 
     .home__stats {
@@ -159,18 +162,27 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .home {
+    .home__container {
+      gap: 3rem;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+    }
+
+    .home__img {
+      height: 350px;
+    }
+  }
+}
+
 @media screen and (max-width: 767px) {
   .home {
     .home__container {
       grid-template-columns: 1fr;
       gap: 2.5rem;
-      padding-top: (48px + 64px);
+      padding-top: 7rem;
       padding-bottom: 3rem;
-    }
-
-    .home__img {
-      grid-row: auto;
-      grid-column: auto;
     }
 
     .home__stats {

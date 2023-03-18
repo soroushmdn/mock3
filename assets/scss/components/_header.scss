@@ -19,7 +19,7 @@
 .nav__logo {
   img {
     display: flex;
-    width: 112px;
+    width: 104px;
   }
 }
 
@@ -125,6 +125,12 @@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // @@@@@@@@@@@@  BREAKPOINTS  @@@@@@@@@@@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media screen and (max-width: 1440px) {
+  .nav__item {
+    margin-right: 1rem;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .overlay {
     position: fixed;
@@ -166,11 +172,6 @@
     align-items: center;
   }
 
-  .nav__menu-header {
-    padding-inline: 1.5rem;
-    border-bottom: 1px solid hsl(195, 14%, 20%);
-  }
-
   .nav__menu {
     background: hsl(195, 14%, 11%);
     position: fixed;
@@ -180,6 +181,11 @@
     height: 100vh;
     z-index: 100;
     transition: right 0.3s ease-in-out;
+  }
+
+  .nav__menu-header {
+    padding-inline: 1.5rem;
+    border-bottom: 1px solid hsl(195, 14%, 20%);
   }
 
   .nav__list {

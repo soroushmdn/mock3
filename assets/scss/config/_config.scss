@@ -216,30 +216,9 @@ button {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1440px) {
   :root {
-    --h1-font-size: 2.488rem;
-    --h2-font-size: 2.074rem;
-    --h3-font-size: 1.728rem;
-    --h4-font-size: 1.44rem;
-    --h5-font-size: 1.2rem;
-    --body-font-size: 1rem;
-    --small-font-size: 0.833rem;
-  }
-
-  .section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
-  .section-title {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width: 767px) {
-  :root {
-    --h1-font-size: 1.802rem;
+    --h1-font-size: 2.2rem;
     --h2-font-size: 1.602rem;
     --h3-font-size: 1.424rem;
     --h4-font-size: 1.266rem;
@@ -249,11 +228,26 @@ button {
   }
 
   .container {
+    max-width: 1024px;
+  }
+
+  .section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .section-title {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
     padding-inline: 1.5rem;
   }
 
   .section {
-    padding-top: 3rem;
+    padding-top: 2rem;
     padding-bottom: 2rem;
   }
 }
