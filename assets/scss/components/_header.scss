@@ -262,8 +262,9 @@
       }
     }
 
+    .nav__link:hover,
     .nav__link-disabled:hover {
-      color: hsl(42, 100%, 65%);
+      color: hsl(200, 13%, 85%);
     }
 
     .dropdown-menu {
