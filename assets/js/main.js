@@ -10,21 +10,25 @@ const navToggle = document.querySelector('.nav__toggle'),
 navToggle.addEventListener('click', () => {
   navMenu.classList.add('show-menu');
   overlay.classList.add('show-overlay');
+  document.body.classList.add('remove-body-scroll');
 });
 
 navClose.addEventListener('click', () => {
   navMenu.classList.remove('show-menu');
   overlay.classList.remove('show-overlay');
+  document.body.classList.remove('remove-body-scroll');
 });
 
 navLogo.addEventListener('click', () => {
   navMenu.classList.remove('show-menu');
   overlay.classList.remove('show-overlay');
+  document.body.classList.remove('remove-body-scroll');
 });
 
 overlay.addEventListener('click', () => {
   navMenu.classList.remove('show-menu');
   overlay.classList.remove('show-overlay');
+  document.body.classList.remove('remove-body-scroll');
 });
 
 const navLinks = document.querySelectorAll('.nav__link');
@@ -32,6 +36,7 @@ navLinks.forEach((e) => {
   e.addEventListener('click', () => {
     navMenu.classList.remove('show-menu');
     overlay.classList.remove('show-overlay');
+    document.body.classList.remove('remove-body-scroll');
   });
 });
 

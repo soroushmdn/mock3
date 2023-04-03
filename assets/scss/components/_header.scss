@@ -11,7 +11,7 @@
 .nav,
 .nav__list,
 .dropdown-box,
-.nav__buttons {
+.nav__login {
   display: flex;
   align-items: center;
 }
@@ -55,19 +55,11 @@
   color: hsl(42, 100%, 65%);
 }
 
-.nav__buttons {
+.nav__login {
   margin-right: auto;
   gap: 0.5rem;
-
-  a {
-    padding: 0.5rem 1.5rem;
-    color: var(--title-color-light);
-    transition: 0.4s;
-  }
-
-  a:first-child:hover {
-    color: hsl(42, 100%, 65%);
-  }
+  padding: 0.6rem 1.2rem;
+  transition: 0.4s;
 }
 
 .dropdown {
@@ -117,7 +109,6 @@
 }
 
 .nav__menu-header,
-.nav__menu-buttons,
 .nav__toggle {
   display: none;
 }
@@ -146,10 +137,6 @@
     transition: opacity 0.3s;
   }
 
-  .nav__buttons {
-    display: none;
-  }
-
   .nav__toggle,
   .nav__close {
     display: flex;
@@ -158,14 +145,21 @@
     cursor: pointer;
   }
 
+  .nav__toggle {
+    margin-right: 1rem;
+  }
+
+  .nav__login i {
+    display: none;
+  }
+
   .nav__close {
     display: inline-block;
     margin-left: 0.3rem;
   }
 
   .nav,
-  .nav__menu-header,
-  .nav__menu-buttons {
+  .nav__menu-header {
     height: 5rem;
     display: flex;
     justify-content: space-between;
@@ -278,25 +272,6 @@
     pointer-events: none;
   }
 
-  .nav__menu-buttons {
-    background: hsl(195, 14%, 11%);
-    border-top: 1px solid hsl(195, 14%, 20%);
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-
-    gap: 2rem;
-    padding-inline: 1.5rem;
-
-    a {
-      width: 100%;
-      text-align: center;
-      padding: 0.7rem;
-      color: var(--title-color-light);
-    }
-  }
-
   // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
   // @@@@@@@@@@@@@ JS CLASSES @@@@@@@@@@@@@
   // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -307,6 +282,10 @@
   .show-overlay {
     opacity: 1;
     pointer-events: auto;
+  }
+
+  .remove-body-scroll {
+    overflow: hidden;
   }
 
   .dropdown.active .dropdown-menu {
@@ -332,6 +311,6 @@
   }
 
   .nav__menu {
-    width: 100%;
+    width: 75%;
   }
 }
