@@ -147,6 +147,7 @@
 
   .nav__toggle {
     margin-right: 1rem;
+    transform: scaleX(-1);
   }
 
   .nav__login i {
