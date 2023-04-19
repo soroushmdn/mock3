@@ -27,8 +27,8 @@
   --primary-color: hsl(42, 100%, 55%);
   --secondary-color: hsl(203, 95%, 30%);
   --bg-color-dark: hsl(195, 14%, 11%);
-  --bg-color-light: hsl(200, 13%, 95%);
-  --container-color: hsl(200, 13%, 92%);
+  --bg-color-light: hsl(200, 13%, 98%);
+  --container-color: hsl(200, 13%, 94%);
 
   --text-color-light: hsl(200, 13%, 80%);
   --title-color-light: hsl(200, 13%, 95%);
@@ -186,13 +186,19 @@ button {
 // @@@@@@@@@     SCROLL BAR     @@@@@@@@@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 ::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
   background: hsl(200, 13%, 80%);
-  width: 10px;
+  border-radius: 1rem;
+  margin-block: 0.5rem;
 }
 
 ::-webkit-scrollbar-thumb {
   background: hsl(200, 13%, 60%);
-  border-radius: 10px;
+  border-radius: 1rem;
+  border: 1px solid hsl(0, 0%, 80%);
 }
 
 ::-webkit-scrollbar-thumb:hover {
