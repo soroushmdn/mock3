@@ -17,9 +17,12 @@
 }
 
 .nav__logo {
+  display: grid;
+  justify-items: center;
+
   img {
     display: flex;
-    width: 104px;
+    width: 40px;
   }
 }
 
@@ -308,12 +311,6 @@
 }
 
 @media screen and (max-width: 767px) {
-  .nav__logo {
-    img {
-      width: 104px;
-    }
-  }
-
   .nav__menu {
     width: 75%;
   }
