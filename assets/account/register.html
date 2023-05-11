@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@ FAVICON @@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@  fonts.google.com/icons @@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <link rel="stylesheet" href="../css/google-material-symbols-rounded.css" />
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@   CSS   @@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <title>تافل ۳ مجری برگزاری آزمون آزمایشی تافل بصورت حضوری و آنلاین</title>
+  </head>
+  <body dir="rtl" class="form-body">
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@  LOGIN   @@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+    <div class="form__container">
+      <img
+        class="form__shape form__shape-1"
+        src="../img/shape-1.png"
+        alt="shape"
+      />
+
+      <img
+        class="form__shape form__shape-2"
+        src="../img/shape-2.png"
+        alt="shape"
+      />
+
+      <div class="form">
+        <div class="form__top">
+          <a href="../../index.html" class="form__logo"> ماک ۳ </a>
+
+          <div class="form__link">
+            <span> حساب کاربری دارید ؟ </span>
+            <a href="./login.html"> وارد شوید </a>
+          </div>
+        </div>
+
+        <div class="form__box">
+          <h4>ثبت نام</h4>
+
+          <form action="">
+            <div class="form__group">
+              <div class="form__field">
+                <div class="input__field">
+                  <input
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="نام (به زبان فارسی)"
+                  />
+
+                  <i class="material-symbols-rounded"> person </i>
+                </div>
+              </div>
+
+              <div class="form__field">
+                <div class="input__field">
+                  <input
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="نام خانوادگی (به زبان فارسی)"
+                  />
+
+                  <i class="material-symbols-rounded"> person </i>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <div class="form__field">
+                <div class="input__field">
+                  <input
+                    type="number"
+                    name=""
+                    id=""
+                    placeholder="شماره موبایل (۰۹۱۲۶۶۵۶۷۶۶)"
+                  />
+
+                  <i class="material-symbols-rounded"> phone_android </i>
+                </div>
+              </div>
+
+              <div class="form__field">
+                <div class="input__field">
+                  <input
+                    type="number"
+                    name=""
+                    id=""
+                    placeholder="شماره تلفن (۰۲۱۴۷۶۲۴۸۴۸)"
+                  />
+
+                  <i class="material-symbols-rounded"> deskphone </i>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <div class="form__field">
+                <div class="input__field">
+                  <input
+                    type="number"
+                    name=""
+                    id=""
+                    placeholder="کد ملی ۱۰ رقمی (۰۰۲۸۷۹۸۵۶۶)"
+                  />
+
+                  <i class="material-symbols-rounded"> badge </i>
+                </div>
+              </div>
+
+              <div class="form__field">
+                <div class="input__field">
+                  <input type="email" name="" id="" placeholder="ایمیل معتبر" />
+
+                  <i class="material-symbols-rounded"> mail </i>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <div class="form__field">
+                <div class="input__field">
+                  <input
+                    type="password"
+                    name=""
+                    id=""
+                    placeholder="رمز عبور (شامل حداقل ۸ رقم)"
+                  />
+
+                  <i class="material-symbols-rounded"> lock </i>
+
+                  <i class="material-symbols-rounded eyeicon">
+                    visibility_off
+                  </i>
+                </div>
+              </div>
+
+              <div class="form__field">
+                <div class="input__field">
+                  <input
+                    type="password"
+                    name=""
+                    id=""
+                    placeholder="تکرار رمز عبور"
+                  />
+
+                  <i class="material-symbols-rounded"> lock </i>
+
+                  <i class="material-symbols-rounded eyeicon">
+                    visibility_off
+                  </i>
+                </div>
+              </div>
+            </div>
+
+            <input type="submit" value="ثبت نام" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@     JS      @@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <script>
+      // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+      // @@@@@@@@@@@@ SHOW & HIDE PASSWORDS @@@@@@@@@@@
+      // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+      const eyeIcons = document.querySelectorAll('.eyeicon');
+
+      eyeIcons.forEach((eyeIcon) => {
+        eyeIcon.addEventListener('click', () => {
+          const passwordInput = eyeIcon.parentElement.querySelector('input');
+
+          if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            eyeIcon.textContent = 'visibility';
+          } else {
+            passwordInput.type = 'password';
+            eyeIcon.textContent = 'visibility_off';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

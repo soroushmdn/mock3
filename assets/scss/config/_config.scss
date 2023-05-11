@@ -1,0 +1,271 @@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@  FONTS  @@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@font-face {
+  font-family: 'body';
+  src: url(../fonts/IRANSansWeb.ttf);
+}
+
+@font-face {
+  font-family: 'title';
+  src: url(../fonts/IBMPlexSansArabic-Bold.ttf);
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@  VARIABLES  @@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+:root {
+  --h1-font-size: 3rem;
+  --h2-font-size: 2.441rem;
+  --h3-font-size: 1.953rem;
+  --h4-font-size: 1.563rem;
+  --h5-font-size: 1.25rem;
+  --body-font-size: 1rem;
+  --small-font-size: 0.8rem;
+  --tiny-font-size: 0.7rem;
+
+  --primary-color: hsl(42, 100%, 55%);
+  --secondary-color: hsl(203, 95%, 30%);
+  --bg-color-dark: hsl(195, 14%, 11%);
+  --bg-color-light: hsl(200, 13%, 98%);
+  --container-color: hsl(200, 13%, 94%);
+
+  --text-color-light: hsl(200, 13%, 80%);
+  --title-color-light: hsl(200, 13%, 95%);
+  --text-color-dark: hsl(200, 13%, 25%);
+  --title-color-dark: hsl(200, 13%, 5%);
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@     BASE    @@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'body';
+}
+
+body {
+  font-size: var(--body-font-size);
+  background: var(--bg-color-light);
+  color: var(--text-color-dark);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'title';
+  color: var(--title-color-dark);
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+}
+
+h5 {
+  font-size: var(--h5-font-size);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: var(--normal-font-size);
+}
+
+button {
+  cursor: pointer;
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@  REUSABLE CLASSES   @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding-inline: 2rem;
+}
+
+.section {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+
+.section-title {
+  text-align: center;
+  width: max-content;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+
+  h3 {
+    color: hsl(203, 95%, 30%);
+    margin-bottom: 0.5rem;
+  }
+}
+
+.button {
+  display: inline-block;
+  text-align: center;
+  background: var(--secondary-color);
+  color: var(--title-color-light);
+  padding: 0.7rem 2.5rem;
+  border-radius: 0.3rem;
+  transition: background 0.4s;
+}
+
+.button:hover {
+  background: hsl(203, 95%, 27%);
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@     SCROLL UP      @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+.scrollup {
+  position: fixed;
+  left: 1.5rem;
+  bottom: -30%;
+  z-index: 99;
+  opacity: 0.5;
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  i {
+    color: hsl(42, 100%, 55%);
+    font-size: 3rem;
+  }
+}
+
+.scrollup:hover {
+  opacity: 1;
+}
+
+.show-scrollup {
+  bottom: 3rem;
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@     SCROLL BAR     @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(200, 13%, 80%);
+  border-radius: 1rem;
+  margin-block: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(200, 13%, 60%);
+  border-radius: 1rem;
+  border: 1px solid hsl(0, 0%, 80%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(200, 13%, 50%);
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@    BREAKPOINTS     @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media (min-width: 3840px) {
+  body {
+    zoom: 2;
+  }
+}
+
+@media (min-width: 2048px) {
+  body {
+    zoom: 1.5;
+  }
+}
+
+@media (max-width: 1440px) {
+  :root {
+    --h1-font-size: 2.2rem;
+    --h2-font-size: 1.602rem;
+    --h3-font-size: 1.424rem;
+    --h4-font-size: 1.266rem;
+    --h5-font-size: 1.125rem;
+    --body-font-size: 0.9rem;
+    --small-font-size: 0.85rem;
+  }
+
+  .container {
+    max-width: 1024px;
+  }
+
+  .section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .section-title {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-inline: 1.5rem;
+  }
+
+  .section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 575px) {
+  :root {
+    --body-font-size: 0.85rem;
+    --small-font-size: 0.8rem;
+    --tiny-font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 374px) {
+  .container {
+    padding-inline: 1rem;
+  }
+}

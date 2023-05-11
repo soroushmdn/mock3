@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@ FAVICON @@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@  fonts.google.com/icons @@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <link rel="stylesheet" href="../css/google-material-symbols-rounded.css" />
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@   CSS   @@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <title>تافل ۳ مجری برگزاری آزمون آزمایشی تافل بصورت حضوری و آنلاین</title>
+  </head>
+  <body dir="rtl" class="form-body">
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@  LOGIN   @@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+    <div class="form__container">
+      <img
+        class="form__shape form__shape-1"
+        src="../img/shape-1.png"
+        alt="shape"
+      />
+
+      <img
+        class="form__shape form__shape-2"
+        src="../img/shape-2.png"
+        alt="shape"
+      />
+
+      <div class="form">
+        <div class="form__top">
+          <a href="../../index.html" class="form__logo"> ماک ۳ </a>
+
+          <div class="form__link">
+            <span> حساب کاربری دارید ؟ </span>
+            <a href="./login.html"> وارد شوید </a>
+          </div>
+        </div>
+
+        <div class="form__box">
+          <h4>فراموشی رمز عبور</h4>
+
+          <form action="">
+            <div class="form__field">
+              <div class="input__field">
+                <input type="email" name="" id="" placeholder="ایمیل " />
+
+                <i class="material-symbols-rounded"> mail </i>
+              </div>
+            </div>
+
+            <input type="submit" value="ارسال لینک فعال سازی" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@     JS      @@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <script>
+      // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+      // @@@@@@@@@@@@ SHOW & HIDE PASSWORDS @@@@@@@@@@@
+      // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+      const eyeIcons = document.querySelectorAll('.eyeicon');
+
+      eyeIcons.forEach((eyeIcon) => {
+        eyeIcon.addEventListener('click', () => {
+          const passwordInput = eyeIcon.parentElement.querySelector('input');
+
+          if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            eyeIcon.textContent = 'visibility';
+          } else {
+            passwordInput.type = 'password';
+            eyeIcon.textContent = 'visibility_off';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
