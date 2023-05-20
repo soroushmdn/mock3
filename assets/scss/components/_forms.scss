@@ -40,9 +40,9 @@
       padding-inline: 0.5rem;
 
       .form__logo {
-        font-family: 'title';
-        font-size: 2rem;
-        color: var(--primary-color);
+        img {
+          width: 64px;
+        }
       }
 
       .form__link {
